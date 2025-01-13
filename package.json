@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.2",
   "type": "module",
+  "homepage": "https://limebell.github.io/sign-plain-value/",
   "scripts": {
     "dev": "vite",
     "build": "graphql-codegen --config ./graphql/codegen.yaml && tsc && vite build",
