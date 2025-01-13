@@ -1,0 +1,20 @@
+overwrite: true
+schema: https://odin-rpc-1.nine-chronicles.com/graphql
+documents: ./graphql/api.graphql
+generates:
+  ./graphql/generated/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withComponent: false
+      withHOC: false
+      scalars:
+        Long: number
+        TxId: string
+  ./graphql/generated/schema.json:
+    plugins:
+      - introspection
